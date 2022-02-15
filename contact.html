@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+        <link href="styles/standard.css" rel="stylesheet">
+        <title>Minerva CG - Contact</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li id="minervaCGNavText">Minerva CG</li>
+                <a href="index.html"><li>Home</li></a>
+                <a href="products.html"><li>Products</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a class="activeNavButton" href="#"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <main>
+            <h1>Hello!</h1>
+            <form method="post" action="/scripts/contact_form.php">
+                <label for="firstName">First Name: </label>
+                <input type="text" id="firstName" name="firstName"><br>
+                <label for="lastName">Last Name: </label>
+                <input type="text" id="lastName" name="lastName"><br>
+                <label for="companyName">Company Name: </label>
+                <input type="text" id="companyName" name="companyName"><br><br>
+                <label>Reason for Contact: </label><br>
+                <input type="radio" id="problemWithProduct" name="contactReason" value="Problem With Product">
+                <label for="problemWithProduct">Problem With Product</label><br>
+                <input type="radio" id="specificRequest" name="contactReason" value="Specific Request">
+                <label for="specificRequest">Specific Request</label><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>Copyright © 2022 Minerva Computer Graphics LLC. All rights reserved.</footer>
+    </body>
+</html>
