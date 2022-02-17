@@ -22,11 +22,15 @@
                 <input type="text" id="lastName" name="lastName"><br>
                 <label for="companyName">Company Name: </label>
                 <input type="text" id="companyName" name="companyName"><br><br>
-                <label>Reason for Contact: </label><br>
-                <input type="radio" id="problemWithProduct" name="contactReason" value="Problem With Product">
-                <label for="problemWithProduct">Problem With Product</label><br>
-                <input type="radio" id="specificRequest" name="contactReason" value="Specific Request">
-                <label for="specificRequest">Specific Request</label><br><br>
+                <p><b>Reason for Contact:</b></p>
+                <input type="radio" id="specificRequest" name="contactReason" value="specificRequest">
+                <label for="specificRequest">Specific Request</label><br>
+                <input type="radio" id="problemWithProduct" name="contactReason" value="problemWithProduct">
+                <label for="problemWithProduct">Problem With Product</label><br><br>
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Phone Number: </label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{7}"><br><br>
                 <input type="submit" value="Submit">
             </form>
         </main>

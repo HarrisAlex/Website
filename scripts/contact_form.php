@@ -9,7 +9,7 @@
        $firstName = format_data($_POST["firstName"]);
        $lastName = format_data($_POST["lastName"]);
        $companyName = format_data($_POST["companyName"]);
-       $problemWithProduct = format_data($_POST["contactReason"]);
+       $problemWithProduct = $_POST["contactReason"];
    }
 
    function format_data($data)
@@ -21,7 +21,7 @@
    }
 
    //Connection
-   $connection = mysqli_connect("minervacg.com", "minekpbj_dbwriter", "qdPKWQ++JT7YTuF2#5>}", "minekpbj_contactRequests");
+   $connection = mysqli_connect("localhost", "minekpbj_dbwriter", "qdPKWQ++JT7YTuF2#5>}", "minekpbj_contactRequests");
 
    if (!$connection)
    {
@@ -29,7 +29,7 @@
    }
 
    $sql = "INSERT INTO ContactSubmissions (firstName, lastName, companyName, contactReason)
-    VALUES ($firstName, $lastName, $companyName, $problemWithProduct)";
+    VALUES ('$firstName', '$lastName', '$companyName', '$problemWithProduct')";
 
     if (mysqli_query($connection, $sql))
     {
@@ -37,7 +37,7 @@
     }
     else
     {
-        echo ("Error: " . $sql . "<br>" . $mysqli_error($connection));
+        echo ("Error: " . $sql . "<br>" . mysqli_error($connection));
     }
 
     $mysqli_close($connection);
