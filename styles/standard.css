@@ -44,7 +44,7 @@ nav ul
     .product
     {
         width: calc(100% - 4%);
-        height: 378px;
+        height: auto;
     }
 }
 
@@ -53,7 +53,7 @@ nav ul
     .product
     {
         width: calc(calc(100% / 2) - 4%);
-        height: 360px;
+        height: auto;
     }
 }
 
@@ -62,7 +62,7 @@ nav ul
     .product
     {
         width: calc(calc(100% / 3) - 4%);
-        height: 378px;
+        height: auto;
     }
 }
 
@@ -71,8 +71,6 @@ nav ul
     display: flex;
     flex-wrap: wrap;
 
-    border: solid 1px rgb(150, 0, 0);
-
     margin: 2%;
 
     color: rgb(0, 0, 0);
@@ -80,22 +78,10 @@ nav ul
 
 .product
 {
-    display: flex;
-    flex-wrap: wrap;
-    
     background-color: rgb(255, 255, 255);
-    
 
     padding: 2%;
     margin: 0px;
-}
-
-.product a
-{
-    width: 100%;
-    
-    margin: 0px;
-    padding: 0px;
 }
 
 .product a:visited, .product a:link, .product a:hover, .product a:active
@@ -107,14 +93,13 @@ nav ul
 {
     border: solid 1px rgb(150, 0, 0);
     padding: 10px;
-    height: 100%;
 
     margin: 0px;
 }
 
 .productInner:hover
 {
-    background-color: rgb(200, 200, 200);
+    box-shadow: 0px 0px 20px;
 }
 
 .product h2
@@ -126,6 +111,18 @@ nav ul
 .product:after
 {
     content: "";
+}
+
+.productPrice
+{
+    text-align: right;
+}
+
+.product img
+{
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
 }
 
 #minervaCGNavText
@@ -200,6 +197,8 @@ a:hover
     color:rgb(0, 0, 0);
     text-align: center;
     right: 0;
+
+    box-shadow: 0px 0px 20px;
 }
 
 .accountDropdown-content a

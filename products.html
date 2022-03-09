@@ -22,6 +22,40 @@
                 </li>
             </ul>
         </nav>
+        <script>
+            //CreateProduct("model", "this is a model", 50);
+            document.body.onload = Start;
+
+            function Start()
+            {
+                var cost = 50;
+                for (i = 0; i < 40; i++)
+                {
+                    cost = Math.floor(Math.random() * 50);
+                    CreateProduct("Product", "This is a model", cost, "products/" + cost + "product.html");
+                }
+            }
+
+            function CreateProduct(productName, productDescription, price, link)
+            {
+                var productTemplate = document.getElementsByClassName("product")[0];
+                console.log(productTemplate);
+                var productInstance = productTemplate.cloneNode(true);
+
+                var name = productInstance.querySelectorAll("h2")[0];
+                var description = productInstance.querySelectorAll("p")[0];
+                var cost = productInstance.querySelectorAll("p")[1];
+                var url = productInstance.querySelectorAll("a")[0];
+
+                name.innerHTML = productName;
+                description.innerHTML = productDescription;
+                cost.innerHTML = "<b>" + "$" + price + "</b>";
+                url.href = link;
+
+                var productsDiv = document.getElementsByClassName("products")[0];
+                productsDiv.appendChild(productInstance);
+            }
+        </script>
         <main>
             <h1>Our Products</h1>
             <div class="products">
@@ -29,50 +63,13 @@
                     <a href="#">
                         <div class="productInner">
                             <h2>Your mom</h2>
+                            <img src="images/Minerva Game Studios Logo.png">
                             <p>This is indeed your mother. Lmao.</p>
+                            <p class="productPrice">Price</p>
                         </div>
                     </a>
                 </div>
-                <div class="product">
-                    <a href="#">
-                        <div class="productInner">
-                            <h2>Your mom</h2>
-                            <p>This is indeed your mother. Lmao.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <div class="productInner">
-                            <h2>Your mom</h2>
-                            <p>This is indeed your mother. Lmao.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <div class="productInner">
-                            <h2>Your mom</h2>
-                            <p>This is indeed your mother. Lmao.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <div class="productInner">
-                            <h2>Your mom</h2>
-                            <p>This is indeed your mother. Lmao.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="#">
-                        <div class="productInner">
-                            <h2>Your mom</h2>
-                            <p>This is indeed your mother. Lmao.</p>
-                        </div>
-                    </a>
-                </div>
+            </div>
         </main>
         <footer>Copyright © 2022 Minerva Computer Graphics LLC. All rights reserved.</footer>
     </body>
