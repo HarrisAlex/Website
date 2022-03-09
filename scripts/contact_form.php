@@ -1,4 +1,6 @@
 <?php
+require_once "../../config/config.php";
+
     $firstName = "";
     $lastName = "";
     $companyName = "";
@@ -20,10 +22,7 @@
        return $data;
    }
 
-   //Connection
-   $connection = mysqli_connect("localhost", "minekpbj_dbwriter", "qdPKWQ++JT7YTuF2#5>}", "minekpbj_contactRequests");
-
-   if (!$connection)
+   if (!$link)
    {
        die("Could not connect: " . mysqli_connect_error());
    }
@@ -31,14 +30,14 @@
    $sql = "INSERT INTO ContactSubmissions (firstName, lastName, companyName, contactReason)
     VALUES ('$firstName', '$lastName', '$companyName', '$problemWithProduct')";
 
-    if (mysqli_query($connection, $sql))
+    if (mysqli_query($link, $sql))
     {
         echo ("New Record Created!");
     }
     else
     {
-        echo ("Error: " . $sql . "<br>" . mysqli_error($connection));
+        echo ("Error: " . $sql . "<br>" . mysqli_error($link));
     }
 
-    $mysqli_close($connection);
+    $mysqli_close($link);
 ?>
