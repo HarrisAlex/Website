@@ -34,6 +34,12 @@
                     cost = Math.floor(Math.random() * 50);
                     CreateProduct("Product", "This is a model", cost, "products/" + cost + "product.html");
                 }
+
+                var productTemplate = document.getElementsByClassName("product")[0];
+                productTemplate.parentElement.removeChild(productTemplate);
+
+                var productsDiv = document.getElementsByClassName("products")[0];
+                productsDiv.style = "";
             }
 
             function CreateProduct(productName, productDescription, price, link)
@@ -58,7 +64,7 @@
         </script>
         <main>
             <h1>Our Products</h1>
-            <div class="products">
+            <div class="products" style="display: none;">
                 <div class="product">
                     <a href="#">
                         <div class="productInner">
