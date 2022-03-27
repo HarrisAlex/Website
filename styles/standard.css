@@ -242,3 +242,35 @@ footer
     position: fixed;
     bottom: 0;
 }
+
+.login
+{
+    background-color: rgb(200, 200, 200);
+    color: black;
+
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px;
+    padding-bottom: 100px;
+}
+
+.login h1
+{
+    text-align: center;
+}
+
+.login form label
+{
+    margin-left: 100px;
+}
+
+.login form input
+{
+    margin-left: 125px;
+}
+
+.login #submitButton
+{
+    margin-left: 100px;
+}
