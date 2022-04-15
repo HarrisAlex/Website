@@ -6,7 +6,7 @@ $username_err = $password_err = $confirm_password_err = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
-    if (empty(trim($_POST["username"]))
+    if (empty(trim($_POST["username"])))
     {
         $username_err = "Please enter a username.";
     }
@@ -65,14 +65,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     }
     else
     {
-        confirm_password = trim($_POST["confirm_password"]);
+        $confirm_password = trim($_POST["confirm_password"]);
 
         if (empty($password_err) and ($password != $confirm_password))
         {
             $confirm_password_err = "Password did not match.";
         }
     }
-
+    echo($username_err);
+    echo($password_err);
+    echo($confirm_password_err);
     if(empty($username_err) and empty($password_err) and empty($confirm_password_err))
     {
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
