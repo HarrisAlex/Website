@@ -37,6 +37,8 @@ nav ul
     overflow: hidden;
 
     list-style-type: none;
+
+    height: 45px;
 }
 
 @media screen and (min-width: 200px)
@@ -164,6 +166,7 @@ nav ul a
     
     color: rgb(255, 255, 255);
 
+    height: 25px;
 
     padding: 10px;
     margin: 0px;
@@ -172,6 +175,7 @@ nav ul a
 nav ul li:hover
 {
     background-color: rgb(255, 255, 255);
+    box-shadow: inset 0px 0px 5px rgb(0, 0, 0);
 }
 
 a
@@ -187,6 +191,7 @@ a:hover
 .accountDropdown
 {
     float: right;
+    height: 45px;
 }
 
 .accountDropdown-content
@@ -217,7 +222,7 @@ a:hover
 
 .accountDropdown:hover .accountDropdown-content
 {
-    display: block;
+    display: none;
 }
 
 .accountDropdown:hover #account-icon
@@ -225,10 +230,9 @@ a:hover
     color: rgb(150, 0, 0);
 }
 
-nav ul li a i
+#account-icon
 {
-    width: 100%;
-    height: 100%;
+    margin: 0px;
 }
 
 footer
@@ -273,4 +277,28 @@ footer
 .login #submitButton
 {
     margin-left: 100px;
+}
+
+.portfolio-Title
+{
+    font-size: 36pt;
+}
+
+.portfolio-ImageSection
+{
+    padding: 3%;
+}
+
+.portfolio-ImageTitle
+{
+    font-size: 28pt;
+    text-align: center;
+
+    margin-top: 0px;
+}
+
+.portfolio-Image
+{
+    width: 100%;
+    height: auto;
 }
