@@ -5,6 +5,31 @@
         <title>Alex Harris - Portfolio</title>
     </head>
     <body>
+        <script>
+            function ShowImageViewer(address)
+            {
+                var fullResViewer = document.getElementById("full-res-image-viewer");
+                fullResViewer.style.display = "block";
+
+                var fullResImage = document.getElementById("full-res-image");
+                fullResImage.src = address;
+
+                var fullResImageLink = document.getElementById("full-res-image-link");
+                fullResImageLink.href = address;
+
+                document.body.style.height = "100%";
+                document.body.style.overflow = "hidden";
+            }
+
+            function CloseImageViewer()
+            {
+                var fullResViewer = document.getElementById("full-res-image-viewer");
+                fullResViewer.style.display = "none";
+
+                document.body.style.height = "100%";
+                document.body.style.overflow = "visible";
+            }
+        </script>
         <nav>
             <ul>
                 <li id="minervaCGNavText">Minerva CG</li>
@@ -27,17 +52,27 @@
             <p class="portfolio-Title"><b>Alex Harris is...</b></p>
             <h1><i>Creating 3D environments.</i></h1>
             <div class="portfolio-ImageSection">
-                <p class="portfolio-ImageTitle">City Alley</p>
-                <img class="portfolio-Image" src="../images/portfolio/city-alley.png">
-                <p>Rendered at 3840x2160 in Blender. 2021. Made using images from textures.com.</p>
+                <h2 class="portfolio-ImageTitle">City Alley</h2>
+                <img class="portfolio-Image" src="../images/portfolio/city-alley-preview.jpg">
+                <p class="portfolio-description">Rendered at 3840x2160 in Blender. 2021. Made using images from textures.com.</p>
+                <p onclick="ShowImageViewer('../images/portfolio/city-alley.jpg')" class="portfolio-full-resolution">View Full Resolution Image</p>
             </div>
             <div class="portfolio-ImageSection">
-                <p class="portfolio-ImageTitle">Creepy Hotel Hallway</p>
-                <img class="portfolio-Image" src="../images/portfolio/creepy-hotel-alley.png">
-                <p>Rendered at 1920x1080 in Blender. 2021. Made using images from textures.com.</p>
+                <h2 class="portfolio-ImageTitle">Creepy Hotel Hallway</h2>
+                <img class="portfolio-Image" src="../images/portfolio/creepy-hotel-hallway-preview.jpg">
+                <p class="portfolio-description">Rendered at 1920x1080 in Blender. 2021. Made using images from textures.com.</p>
+                <p onclick="ShowImageViewer('../images/portfolio/creepy-hotel-hallway.jpg')" class="portfolio-full-resolution">View Full Resolution Image</p>
             </div>
-            <h2>Programming Gameplay.</h2>
+            <h1><i>Programming Gameplay.</i></h1>
+            <h1><i>Designing User Interfaces.</i></h1>
+            <h1><i>Composing Music.</i></h1>
         </main>
+        <div id="full-res-image-viewer">
+            <i class="material-icons" onclick="CloseImageViewer()">clear</i>
+            <div id="full-res-image-area">
+                <a href="" id="full-res-image-link" target="_blank"><img id="full-res-image" src=""></a>
+            </div>
+        </div>
         <footer>Copyright © 2022 Alex Harris. All rights reserved.</footer>
     </body>
 </html>

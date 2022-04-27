@@ -9,12 +9,13 @@ body
 main
 {
     background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
+    color:rgb(20, 20, 20);
 
-    margin: 2%;
-    padding: 2%;
+    padding: 4%;
 
     display: block;
+    
+    z-index: 0;
 }
 
 main h3
@@ -242,9 +243,11 @@ footer
     padding: 20px;
     font-size: 10pt;
     text-align: center;
+    
+    z-index: 1;
 
-    position: fixed;
-    bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .login
@@ -286,19 +289,80 @@ footer
 
 .portfolio-ImageSection
 {
-    padding: 3%;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.portfolio-ImageSection p
+{
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+.portfolio-full-resolution
+{
+    cursor: pointer;
+
+    color: rgb(20, 20, 20);
+}
+
+.portfolio-description
+{
+    color: rgb(120, 120, 120);
 }
 
 .portfolio-ImageTitle
 {
     font-size: 28pt;
-    text-align: center;
+    font-weight: normal;
+    text-align: center; 
 
     margin-top: 0px;
+
+    width: 100%;
+
+    color: rgb(20, 20, 20);
 }
 
 .portfolio-Image
 {
     width: 100%;
     height: auto;
+}
+
+#full-res-image-viewer
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(255, 255, 255);
+
+    display: none;
+    color: rgb(0, 0, 0);
+}
+
+#full-res-image-area
+{
+    display: flex;
+
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 0px;
+}
+
+#full-res-image-viewer i
+{
+    font-size: 24pt;
+    cursor: pointer;
+}
+
+#full-res-image
+{
+    width: 100%;
 }
