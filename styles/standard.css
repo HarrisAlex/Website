@@ -58,7 +58,7 @@ nav ul
     background-color: rgb(20, 20, 20);
 }
 
-@media screen and (min-width: 200px)
+@media only screen and (max-width: 700px)
 {
     nav ul
     {   
@@ -85,34 +85,8 @@ nav ul
     }
 }
 
-@media screen and (min-width: 600px)
-{
-    nav ul
-    {   
-        display: block;
-    }
 
-    #minervaCGNavText
-    {
-        width: auto;
-
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    nav ul li
-    {
-        width: auto;
-    }
-
-    .product
-    {
-        width: calc(calc(100% / 2) - 4%);
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 1100px)
+@media only screen and (min-width: 1100px)
 {
     #minervaCGNavText
     {
