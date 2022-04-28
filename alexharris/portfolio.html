@@ -30,23 +30,47 @@
                 document.body.style.height = "100%";
                 document.body.style.overflow = "visible";
             }
+
+            function ToggleNavBar()
+            {
+                navLinks = document.getElementById("nav-links");
+
+                if (navLinks.style.display === "" && screen.width < 700)
+                {
+                    navLinks.style.display = "none";
+                }
+
+                if (navLinks.style.display === "none")
+                {
+                    console.log("working");
+                    navLinks.style.display = "block";
+                }
+                else
+                {
+                    console.log(navLinks.style.display);
+                    navLinks.style.display = "none";
+                }
+            }
         </script>
         <nav>
             <ul>
                 <li id="minervaCGNavText">Minerva CG</li>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../products.html">Products</a></li>
-                <li class="activeNavButton"><a href="#">Portfolio</a></li>
-                <li><a href="../about.html">About</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <li class="accountDropdown">
-                    <a href="#"><i class="material-icons" id="account-icon">assignment_ind</i></a>
-                    <div class="accountDropdown-content">
-                        <h4>Account</h4>
-                        <a href="sign-up.html"><p>Sign up</p></a>
-                        <a href="log-in.html"><p>Log in</p></a>
-                    </div>
-                </li>
+                <li><i class="material-icons" id="nav-dropdown" onclick="ToggleNavBar()">dehaze</i></li>
+                <div id="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../products.html">Products</a></li>
+                    <li class="activeNavButton"><a href="#">Portfolio</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li class="accountDropdown">
+                        <a href="#"><i class="material-icons" id="account-icon">assignment_ind</i></a>
+                        <div class="accountDropdown-content">
+                            <h4>Account</h4>
+                            <a href="sign-up.html"><p>Sign up</p></a>
+                            <a href="log-in.html"><p>Log in</p></a>
+                        </div>
+                    </li>
+                </div>      
             </ul>
         </nav>
         <main>

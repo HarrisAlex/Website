@@ -11,8 +11,8 @@ main
     background-color: rgb(255, 255, 255);
     color:rgb(20, 20, 20);
 
-    padding: 4%;
-    padding-top: 1%;
+    padding: 50rem;
+    padding-top: 10rem;
 
     display: block;
     
@@ -58,6 +58,11 @@ nav ul
     background-color: rgb(20, 20, 20);
 }
 
+#nav-links
+{
+    display: block;
+}
+
 @media only screen and (max-width: 700px)
 {
     nav ul
@@ -83,6 +88,44 @@ nav ul
         width: calc(100% - 4%);
         height: auto;
     }
+
+    main
+    {
+        padding: 3rem;
+        padding-top: 1rem;
+    }
+
+    .portfolio-ImageSection
+    {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .portfolio-Image
+    {
+        width: 100vw;
+        margin-left: -3rem;
+    }
+
+    #nav-dropdown
+    {
+        cursor: pointer;
+        display: block;
+
+        text-align: center;
+
+        transition: color 0.25s;
+    }
+
+    #nav-dropdown:hover, #nav-dropdown:active
+    {
+        color:rgb(150, 0, 0);
+    }
+
+    #nav-links
+    {
+        display: none;
+    }
 }
 
 
@@ -98,6 +141,29 @@ nav ul
     {
         width: calc(calc(100% / 3) - 4%);
         height: auto;
+    }
+
+    main
+    {
+        padding: 4rem;
+        padding-top: 1rem;
+    }
+
+    .portfolio-ImageSection
+    {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    .portfolio-Image
+    {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #nav-dropdown
+    {
+        display: none;
     }
 }
 
@@ -178,7 +244,7 @@ nav ul li
     transition: background-color 0.25s;
 }
 
-nav ul li:hover
+nav ul li:hover, nav ul li:active
 {
     background-color: rgb(255, 255, 255);
 }
@@ -206,7 +272,7 @@ a
     transition: color 0.25s;
 }
 
-a:hover
+a:hover, a:active
 {
     color: rgb(150, 0, 0);
 }
@@ -237,18 +303,18 @@ a:hover
     color:rgb(0, 0, 0);
 }
 
-.accountDropdown-content a:hover
+.accountDropdown-content a:hover, .accountDropdown-content a:active
 {
     background-color: rgb(255, 255, 255);
     color:rgb(150, 0, 0);
 }
 
-.accountDropdown:hover .accountDropdown-content
+.accountDropdown:hover .accountDropdown-content, .accountDropdown:active .accountDropdown-content
 {
     display: none;
 }
 
-.accountDropdown:hover #account-icon
+.accountDropdown:hover #account-icon, .accountDropdown:active #account-icon
 {
     color: rgb(150, 0, 0);
 }
@@ -310,12 +376,6 @@ footer
     margin-top: 0px;
 }
 
-.portfolio-ImageSection
-{
-    padding-left: 8%;
-    padding-right: 8%;
-}
-
 .portfolio-ImageSection p
 {
     font-weight: 500;
@@ -349,7 +409,6 @@ footer
 
 .portfolio-Image
 {
-    width: 100%;
     height: auto;
 }
 
@@ -389,7 +448,7 @@ footer
     transition: color 0.25s;
 }
 
-#full-res-image-viewer i:hover
+#full-res-image-viewer i:hover, #full-res-image-viewer i:active
 {
     color: rgb(150, 0, 0);
 }
