@@ -85,7 +85,7 @@ nav ul
 
     nav ul li
     {
-        width: 100%;  
+        width: 100%;
     }
 
     .product
@@ -150,6 +150,8 @@ nav ul
         transform:translate(0, -100%);
 
         transition: transform 1s ease-in-out;
+
+        width: 100%;
     }
 
     #nav-links li
