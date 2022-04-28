@@ -4,33 +4,15 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Minerva CG - About</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/main.js"></script>
     </head>
     <body>
-        <script>
-            function ToggleNavBar()
-            {
-                navLinks = document.getElementById("nav-links");
-
-                if (navLinks.style.display === "" && screen.width < 700)
-                {
-                    navLinks.style.display = "none";
-                }
-
-                if (navLinks.style.display === "none")
-                {
-                    navLinks.style.display = "block";
-                }
-                else
-                {
-                    navLinks.style.display = "none";
-                }
-            }
-        </script>
         <nav>
             <ul>
                 <li id="minervaCGNavText">Minerva CG</li>
-                <li><i class="material-icons" id="nav-dropdown" onclick="ToggleNavBar()">dehaze</i></li>
+                <li><i class="material-icons" id="nav-dropdown" onclick="OpenNavBar()">dehaze</i></li>
                 <div id="nav-links">
+                    <li><i class="material-icons" id="nav-dropdown-close" onclick="CloseNavBar()">clear</i></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="alexharris/portfolio.html">Portfolio</a></li>

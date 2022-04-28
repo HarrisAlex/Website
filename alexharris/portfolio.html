@@ -4,59 +4,15 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>Alex Harris - Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../scripts/main.js"></script>
     </head>
     <body>
-        <script>
-            function ShowImageViewer(address)
-            {
-                var fullResViewer = document.getElementById("full-res-image-viewer");
-                fullResViewer.style.display = "block";
-
-                var fullResImage = document.getElementById("full-res-image");
-                fullResImage.src = address;
-
-                var fullResImageLink = document.getElementById("full-res-image-link");
-                fullResImageLink.href = address;
-
-                document.body.style.height = "100%";
-                document.body.style.overflow = "hidden";
-            }
-
-            function CloseImageViewer()
-            {
-                var fullResViewer = document.getElementById("full-res-image-viewer");
-                fullResViewer.style.display = "none";
-
-                document.body.style.height = "100%";
-                document.body.style.overflow = "visible";
-            }
-
-            function ToggleNavBar()
-            {
-                navLinks = document.getElementById("nav-links");
-
-                if (navLinks.style.display === "" && screen.width < 700)
-                {
-                    navLinks.style.display = "none";
-                }
-
-                if (navLinks.style.display === "none")
-                {
-                    console.log("working");
-                    navLinks.style.display = "block";
-                }
-                else
-                {
-                    console.log(navLinks.style.display);
-                    navLinks.style.display = "none";
-                }
-            }
-        </script>
         <nav>
             <ul>
                 <li id="minervaCGNavText">Minerva CG</li>
-                <li><i class="material-icons" id="nav-dropdown" onclick="ToggleNavBar()">dehaze</i></li>
+                <li><i class="material-icons" id="nav-dropdown" onclick="OpenNavBar()">dehaze</i></li>
                 <div id="nav-links">
+                    <li><i class="material-icons" id="nav-dropdown-close" onclick="CloseNavBar()">clear</i></li>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../products.html">Products</a></li>
                     <li class="activeNavButton"><a href="#">Portfolio</a></li>
@@ -70,7 +26,7 @@
                             <a href="log-in.html"><p>Log in</p></a>
                         </div>
                     </li>
-                </div>      
+                </div>
             </ul>
         </nav>
         <main>
