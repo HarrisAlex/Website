@@ -9,44 +9,104 @@
     <body>
         <nav>
             <ul>
-                <li id="minervaCGNavText">Minerva CG</li>
+                <li id="minervaCGNavText">Alex Harris</li>
                 <li><i class="material-icons" id="nav-dropdown" onclick="OpenNavBar()">dehaze</i></li>
                 <div id="nav-links">
                     <li><i class="material-icons" id="nav-dropdown-close" onclick="CloseNavBar()">clear</i></li>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../products.html">Products</a></li>
+                    <!-- <li><a href="../products.html">Products</a></li> -->
                     <li class="activeNavButton"><a href="#">Portfolio</a></li>
-                    <li><a href="../about.html">About</a></li>
+                    <!-- <li><a href="../about.html">About</a></li> -->
                     <li><a href="../contact.html">Contact</a></li>
-                    <li class="accountDropdown">
+                    <!-- <li class="accountDropdown">
                         <a href="#"><i class="material-icons" id="account-icon">assignment_ind</i></a>
                         <div class="accountDropdown-content">
                             <h4>Account</h4>
                             <a href="sign-up.html"><p>Sign up</p></a>
                             <a href="log-in.html"><p>Log in</p></a>
                         </div>
-                    </li>
+                    </li> -->
                 </div>
             </ul>
         </nav>
         <main>
             <p class="portfolio-Title"><b>Alex Harris is...</b></p>
-            <h1><i>Creating 3D environments.</i></h1>
+            <h1><i>Creating 3D environments</i></h1>
             <div class="portfolio-ImageSection">
-                <h2 class="portfolio-ImageTitle">City Alley</h2>
+                <h2 class="portfolio-subtitle">City Alley</h2>
                 <img class="portfolio-Image" src="../images/portfolio/city-alley-preview.jpg">
                 <p class="portfolio-description">Rendered at 3840x2160 in Blender. 2021. Made using images from textures.com.</p>
+                <p>I am very proud of this render, and I genuinely believe that I have achieved photorealism in some areas of this image, namely the bottom left of the render. 
+                    Of course, there are plenty of aspects of this render that could use some refinement. I experimented with a couple different textures for the sky, and I wish 
+                    I had settled on a different one than used in this final render. Throughout this project, I also switched back and forth between having a wall around 20 feet away 
+                    from the camera that would block the view beyond and having a wall much farther away, and I believe now that this render would have been improved with the 
+                    presence of a closer wall rather than a semi-infinite alley. I believe the biggest giveaway that this render is CGI is the very obvious repetition in the
+                    puddles, the trash bins, and the streetlamps, which all would have been naturally resolved with the inclusion of the closer wall. I also notice now that
+                    there are no signs of water anywhere besides the ground, except for maybe on the tile wall on the close right.
+                </p>
                 <p onclick="ShowImageViewer('../images/portfolio/city-alley.jpg')" class="portfolio-full-resolution">View Full Resolution Image</p>
             </div>
             <div class="portfolio-ImageSection">
-                <h2 class="portfolio-ImageTitle">Creepy Hotel Hallway</h2>
+                <h2 class="portfolio-subtitle">Creepy Hotel Hallway</h2>
                 <img class="portfolio-Image" src="../images/portfolio/creepy-hotel-hallway-preview.jpg">
                 <p class="portfolio-description">Rendered at 1920x1080 in Blender. 2021. Made using images from textures.com.</p>
+                <p>I am quite happy with this render. It is very simplistic, but I think that it does its job at being creepy. This render was inspired by the Silent Hill
+                    video game series. Specifically, a level from Silent Hill 2 that takes places in an abandoned hotel.
+                </p>
                 <p onclick="ShowImageViewer('../images/portfolio/creepy-hotel-hallway.jpg')" class="portfolio-full-resolution">View Full Resolution Image</p>
             </div>
-            <h1><i>Programming Gameplay.</i></h1>
-            <h1><i>Designing User Interfaces.</i></h1>
-            <h1><i>Composing Music.</i></h1>
+            <div class="portfolio-ImageSection">
+                <h2 class="portfolio-subtitle">Creepy Game Menu</h2>
+                <img class="portfolio-Image" src="../images/portfolio/game-menu-preview.jpg">
+                <p class="portfolio-description">Screenshot of real-time rendering in Unity. 2018. Made using images from textures.com.</p>
+                <p>This is an old project of mine, for a horror game that I never quite finished, but was supposed to be down a similar vein of horror to Resident Evil. This
+                    menu is very simple, but I believe that there is an elegance in simplicity, and as such I am satisfied with this menu.
+                </p>
+                <p onclick="ShowImageViewer('../images/portfolio/game-menu.jpg')" class="portfolio-full-resolution">View Full Resolution Image</p>
+            </div>
+            <h1><i>Programming Gameplay</i></h1>
+            <div class="portfolio-videoSection">
+                <h2 class = "portfolio-subtitle">Spooky Encounter</h2>
+                <video class = "portfolio-video" poster="../videos/portfolio/spooky-encounter-poster.jpg" controls>
+                    <source src="../videos/portfolio/spooky-encounter.mp4" type="video/mp4">
+                </video>
+                <p class="portfolio-description">Running in real-time in Unity. 2021. Made using images from textures.com and public domain sounds from freesound.org.</p>
+                <p>This short clip of gameplay comes from an early build of a horror game that I am still working on to this day, which is really not as much of a horror game
+                    as it used to be. The game, at the state of this clip, was a psychological horror game inspired by the Amnesia series in a gameplay sense, and Silent
+                    Hill 2 in a narrative sense. While (thankfully) not present in this build, there was an enemy in this level that would quietly stalk the player as they
+                    explored the level. 
+                </p>
+            </div>
+            <h1><i>Creating Vector Graphics</i></h1>
+            <div class="portfolio-ImageSection">
+                <h2 class="portfolio-subtitle">Comic Strip</h2>
+                <img class="portfolio-Image" src="../images/portfolio/vector-comic-strip.jpg">
+                <p class="portfolio-description">Created in Inkscape. 2022. A short, small project created for a digital imaging class.</p>
+                <p>My main inspiration for this comic strip were some Marvel Noir comics, which were themselves inspired by film noir, among other things. My process while creating
+                    this comic strip was finding some reference photos for the character and the environment, and then blocking out the basic shapes on top in order to make sure
+                    proportions were accurate. After I had some basic shapes, I took creative control and added more shapes and refined them until I was able to suggest as
+                    many details as I could with as few shapes as possible. What I found to be the most difficult about this project was the limitation of only using black and
+                    white, as this made it very difficult to differentiate between different objects.
+                </p>
+            </div>
+            <div class="portfolio-ImageSection">
+                <h2 class="portfolio-subtitle">User Interface Concept</h2>
+                <img class="portfolio-Image" src="../images/portfolio/user-interface-login.jpg">
+                <img class="portfolio-Image" src="../images/portfolio/user-interface-dashboard.jpg">
+                <img class="portfolio-Image" src="../images/portfolio/user-interface-explore.jpg">
+                <p class="portfolio-description">Created in Inkscape. 2022. A project created for an interactive design class.</p>
+                <p>These are the concept images I created for a fake website called "Info Hub," which would function similarly to YouTube. These concept images are the 2nd
+                    iteration of this project after I conducted some user testing. Other than the logo for this project, I am satisfied with how the design of this fake website
+                    turned out.
+                </p>
+            </div>
+            <div class="portfolio-ImageSection">
+                <h2 class="portfolio-subtitle">Logo Mockups</h2>
+                <img class="portfolio-Image" src="../images/portfolio/logo-mockups.png">
+                <p class="portfolio-description">Created in GIMP. 2022. A project created for a digital imaging class.</p>
+                <p>These were some rapid fire logo designs that I made in the span of about an hour. None of them are particularly special, but I like a couple of them. This was
+                    less so a logo design project and more so a test to see how many ways I could my combine initials.
+                </p>
+            </div>
         </main>
         <div id="full-res-image-viewer">
             <i class="material-icons" onclick="CloseImageViewer()">clear</i>
